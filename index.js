@@ -31,7 +31,7 @@ app.use((err, req, res, next) => {
     .send({ error: err.message })
 });
 
-const PORT = process.env.PORT || 5002
+const PORT = process.env.PORT || 5010
 
 
 async function start() {

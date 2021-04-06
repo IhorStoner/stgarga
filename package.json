@@ -1,0 +1,25 @@
+{
+  "name": "stgarga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "heroku-prebuild": "npm install --prefix client",
+    "client::install": "npm install --prefix client",
+    "client::build": "npm run build --prefix client",
+    "client": "npm start --prefix client",
+    "server": "nodemon index.js",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \" npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1"
+  }
+}
